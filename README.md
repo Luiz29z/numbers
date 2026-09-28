@@ -1,4 +1,4 @@
-# Numera | Sorteador de números
+# Numbers | Sorteador de números
 
 Uma ferramenta simples e gratuita para sortear números dentro de um intervalo definido por você.
 
