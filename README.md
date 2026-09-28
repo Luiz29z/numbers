@@ -2,7 +2,7 @@
 
 Uma ferramenta simples e gratuita para sortear números dentro de um intervalo definido por você.
 
-![Prévia do sorteador Numera](https://github.com/user-attachments/assets/6c9a0948-4ac3-4790-a855-46f1d1c940ef)
+![Prévia do sorteador Numera](assets/capa.png)
 
 ## Sobre o projeto
 
