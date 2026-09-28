@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/index.css">
+
+    <title>Numbers</title>
+<!-- sora -->
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&
+    display=swap" rel="stylesheet">
+<!-- Roboto mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&
+    display=swap" rel="stylesheet">
+<!-- Roboto flex -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+<!-- Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="container grid">
+    <img src="./assets/logo.svg" alt="Logo">
+    <div id="layout">
+    <header class="grid">
+        <div class="grid">
+            <h3>Online - gratuito</h3>
+            <h1>Sorteador de números</h1>
+        </div>
+
+        <div id="informations" class="desktop-only">
+            <section>
+                <img src="./assets/Frame-2.svg" alt="">
+    <div>
+                <h3>Como funciona o sorteador de números?</h3>
+                <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+            </div>
+            </section>
+    
+            <section>
+                <img src="./assets/Frame-2.svg" alt="">
+                <div>
+                <h3>Posso escolher o intervalo dos números?</h3>
+                <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+            </div>
+            </section>
+    
+        </div>
+        
+    </header>
+
+    <main class="grid">
+<section>
+<h2>Quero sortear:</h2>
+<p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+</section>
+
+<form method="post" enctype="multipart/form-data">
+    <fieldset>
+        <div class="flex">
+        <div class="ipt-number">
+        <label for="draw">Números</label>
+        <div class="input-wrapper">
+        <input type="text" name="draw" id="draw" class="nan" value="2">
+        </div>
+    </div>
+
+    <div
+    class="ipt-number">
+        <label for="quantity">De</label>
+        <div class="input-wrapper">
+        <input type="text" name="quantity" id="initial" class="nan" value="1">
+    </div>
+    </div>
+
+    <div class="ipt-number">
+        <label for="total">A</label>
+        <div class="input-wrapper">
+        <input type="text" name="total" id="final" class="nan" value="100">
+        </div>
+    </div>
+</div>
+    <div id="checkbox">
+        <div>
+            <div id="btn">
+        <input type="checkbox" id="check" name="check" checked>
+    </div>
+    </div>
+        <label for="check">Não repetir número</label>
+    </div>
+
+</fieldset>
+<button id="draw-one">
+    SORTEAR 
+    <img src="./assets/Frame-1.svg" alt="">
+</button>
+</form>
+
+    </main>
+
+    <footer class="">
+        <section>
+            <img src="./assets/Frame-2.svg" alt="">
+<div>
+            <h3>Como funciona o sorteador de números?</h3>
+            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+        </div>
+        </section>
+
+        <section>
+            <img src="./assets/Frame-2.svg" alt="">
+            <div>
+            <h3>Posso escolher o intervalo dos números?</h3>
+            <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+        </div>
+        </section>
+
+    </footer>
+</div>
+<div id="bg-shape">
+</div>
+<script src="./scripts.js"></script>
+</body>
+</html>

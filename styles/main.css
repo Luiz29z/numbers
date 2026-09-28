@@ -1,0 +1,283 @@
+main {
+    gap: 2.5rem;
+    & > section {
+        & h2 {
+            font: var(--label-md);
+            color: var(--content-primary);
+        }
+
+        & p {
+            margin-top: .125rem;
+            font: var(--paragraph-md);
+            color: var(--content-tertiary);
+        }
+    }
+
+& form {
+    & fieldset {
+        all: unset;
+        & .flex {
+        display: flex;
+        gap: .75rem; 
+    margin-bottom: 1.25rem;
+    }
+
+        & div.ipt-number {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+        }
+
+        & label {
+            text-align: center;
+            font: var(--label-sm);
+            color: var(--content-secondary);
+        
+        }
+        & .input-wrapper {
+display: grid;
+align-items: center;
+justify-content: center;
+            width: 5.7rem;
+        height: 3.65rem;
+        border-radius: .5rem;
+        
+        &:hover { 
+            background: var(--gradient-border);
+
+& input {
+    background-color: var(--bg-tertiary);
+}
+
+
+        } 
+    
+&:focus-within {
+    width: 5.75rem;
+    height: 3.75rem;
+    background: var(--gradient-border);
+
+    & input {
+        background-color: var(--bg-tertiary);
+    }
+}
+
+    }
+
+& input[type="text"] {
+    all: unset;
+    width: 5.5rem;
+    height: 3.5rem;
+    border-radius: .5rem;
+    background-color: var(--bg-secondary);
+    color: var(--content-primary);
+    font: var(--dp-sm);
+    text-align: center;
+    transition: background-color 500ms ease;
+
+}
+
+& #checkbox {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+gap: .5rem;
+margin-bottom: 2.5rem;
+
+& label {
+    all: unset;
+    font: 400 .75rem/1.5 "Inter", sans-serif;
+    color: var(--content-primary);
+}
+
+& > div { 
+    cursor: pointer;
+position: relative;
+width: 2rem;
+height: 1.25rem;
+border-radius: 1rem;
+background-color: var(--content-tertiary);
+display: grid;
+align-items: center;
+padding-inline: .25rem;
+
+& #btn {
+    width: .875rem;
+    height: .875rem;
+    border-radius: 50%;
+    background-color: var(--content-primary);
+    transition: 200ms ease-in-out;
+}
+
+    & input {
+        all: unset;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    &:has(:checked) {
+    background: var(--gradient-bg);
+
+& #btn {
+    transform: translateX(.65rem);
+}
+
+    }
+}
+}
+
+}
+
+#draw-one:hover {
+    & img {
+        animation: goBack 1s infinite ease-in-out alternate;
+    }
+}
+
+
+} }
+
+
+& button {
+    all: unset;
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--bg-tertiary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    color: var(--content-primary);
+    font: var(--label-sm);
+    cursor: pointer;
+    position: relative;
+
+&::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    border-radius: inherit;
+    width: 101%;
+    height: 3.7rem;
+    top: -0.1rem;
+    bottom: 0;
+    background: var(--gradient-border) repeat;
+visibility: hidden;
+}
+
+&:hover {
+    background-color: var(--bg-secondary);
+    & img {
+        animation: rotate 1.25s infinite linear;
+    }
+    
+    &::before {
+    animation: animateBorder 400ms infinite alternate linear backwards;
+    visibility: visible;
+}
+
+} 
+
+
+}
+
+@keyframes animateBorder {
+    0% {
+        background:  linear-gradient(90deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+    }
+    10% {
+        background:  linear-gradient(135deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+    }
+
+20% {
+    background:  linear-gradient(180deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+}
+
+30% {
+    background:  linear-gradient(200deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+}
+
+40% {
+    background:  linear-gradient(225deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+}
+
+50% {
+    background:  linear-gradient(250deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+}
+
+60% {
+    background:  linear-gradient(270deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+}
+
+70% {
+    background:  linear-gradient(295deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+}
+
+80% {
+    background:  linear-gradient(315deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+}
+
+90% {
+    background:  linear-gradient(360deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+}
+
+100% {
+    background:  linear-gradient(90deg,
+#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%
+); 
+}
+
+}
+
+@keyframes goBack {
+    100% {
+        transform: translateX(.75rem);
+    }
+}
+
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (950px <= width < 1200px) {
+main {
+    max-width: 22rem;
+}    
+    }
+
+@media (width >= 1200px) {
+    main {
+        max-width: 26rem;
+        max-height: 21.5rem;
+    }
+}

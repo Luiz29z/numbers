@@ -1,0 +1,206 @@
+/* Div que irá conter os elementos */
+.space {
+    max-width: 100%;
+    width: 100%;
+    min-height: 18rem;
+max-height: max-content;
+padding-block: 4.5rem 2.5rem;
+display: grid;
+justify-content: center;
+}
+
+/* Título da div */ 
+.result {
+    text-align: center;
+    font: var(--label-md);
+    color: var(--content-primary);
+}
+
+/* Sub-título */ 
+.sub-title {
+    font: var(--overline);
+    color: var(--content-secondary);
+    text-align: center;
+}
+
+/* Div pai dos números sorteados */ 
+.div-sorted-numbers {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   align-content: center;
+    margin-top: 2.5rem;
+}
+
+/* div que irá conter cada número sorteado */
+.number-sorted {
+    font: var(--number-mono);
+    color: var(--content-brand);
+    animation:
+    noRotation 400ms ease 250ms,
+    scale 350ms forwards ease,
+    diminuteScale 350ms ease 900ms forwards,
+    colorInverse 100ms linear 600ms forwards,
+    colorReturn 100ms linear 900ms forwards;
+}
+/* animação que o número terá ao aparecer */ 
+
+.animation-number {
+   display: grid;
+   align-items: center;
+   justify-content: center;
+  align-content: center;
+    background-color: var(--content-brand);
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 1.75rem;
+     animation:
+    scale 350ms forwards ease,
+    rotation 400ms ease 250ms,
+    backTransparent 350ms ease 900ms forwards,
+    diminuteScale 350ms ease 900ms forwards;
+}
+
+/* Transição para aparecer o botão */
+.appear-button {
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
+.appear-button.is-visible {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .number-sorted,
+    .animation-number {
+        animation: none;
+    }
+
+    .appear-button {
+        transition: none;
+    }
+}
+
+@keyframes colorInverse {
+    100% {
+        color: var(--color-inverse);
+}
+}
+
+@keyframes colorReturn {
+    100% {
+        color: var(--content-brand);
+    }
+}
+
+@keyframes scale {
+    0% {
+        scale: 0;
+    }
+    100% {
+        scale: 1.05;
+    }
+}
+
+@keyframes rotation {
+    10% {
+        transform: rotate(18deg);
+    }
+    20% {
+        transform: rotate(36deg);
+    }
+    30% {
+        transform: rotate(54deg);
+    }
+    40% {
+        transform: rotate(72deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    60% {
+        transform: rotate(108deg);
+    }
+    70% {
+        transform: rotate(126deg);
+    }
+    80% {
+        transform: rotate(144deg);
+    }
+    90% {
+        transform: rotate(162deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes noRotation {
+    10% {
+      transform: rotate(-18deg);
+    }
+    20% {
+      transform: rotate(-36deg);
+    }
+    30% {
+      transform: rotate(-54deg);
+    }
+    40% {
+      transform: rotate(-72deg);
+    }
+    50% {
+      transform: rotate(-90deg);
+    }
+    60% {
+      transform: rotate(-108deg);
+    }
+    70% {
+      transform: rotate(-126deg);
+    }
+    80% {
+      transform: rotate(-144deg);
+    }
+    90% {
+      transform: rotate(-162deg);
+    }
+    100% {
+      transform: rotate(-180deg);
+    }
+  }
+
+@keyframes backTransparent {
+    to {
+        background-color: transparent;
+    }
+}
+
+@keyframes diminuteScale {
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes moveNumber {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+@media (950px <= width < 1200px) {
+    .space {
+        width: 22rem;
+        padding-block: 0 2rem;
+    }    
+}    
+
+@media (width >= 1200px) {
+    .space {
+        width: 26rem;
+    }
+}
+

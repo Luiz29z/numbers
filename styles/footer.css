@@ -1,0 +1,55 @@
+footer, #informations {
+    margin-block: 5rem 2.5rem;
+gap: 2.25rem;
+
+& section {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+}
+
+    & div {
+        & h3 {
+            color: var(--content-brand);
+            font: var(--paragraph-md);
+            text-transform: unset;
+        }
+
+& p {
+    color: var(--content-secondary);
+    font: var(--paragraph-sm);
+}
+
+    }
+
+
+}
+
+footer { /* Grid colocado fora do utility para retirá-lo de telas maiores */
+    display: grid;
+}
+
+@media (950px <= width) {
+footer {
+    display: none;
+}
+    
+#informations {
+    margin-block: 0;
+    max-width: 20rem;
+
+    & section + section {
+        margin-top: 2.25rem;
+       }
+
+}
+
+}
+
+
+@media (width >= 1200px) {
+#informations {
+    max-width: 24.125rem;
+}
+
+}
